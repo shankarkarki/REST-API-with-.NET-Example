@@ -38,3 +38,10 @@
 /Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.dll
 /Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Sinks.File.dll
 /Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Extensions.Logging.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.AspNetCore.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Extensions.Hosting.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Formatting.Compact.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Settings.Configuration.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Sinks.Console.dll
+/Users/shankar/Projects/Catalog/bin/Debug/net7.0/Serilog.Sinks.Debug.dll
