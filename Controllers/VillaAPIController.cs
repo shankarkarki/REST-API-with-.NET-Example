@@ -18,7 +18,7 @@ namespace Controllers
         [HttpGet]
        public ActionResult<IEnumerable<VillaDTO>> GetVillas()
        {
-             _logger.LogInformation("getting all villas");
+            //  _logger.LogInformation("getting all villas");
              return Ok(VillaStore.villaList);
        }
 
@@ -30,7 +30,7 @@ namespace Controllers
        {
            if(id == 0)
            {
-            _logger.LogError("getting error with villa id" + id);
+            // _logger.LogError("getting error with villa id" + id);
             return BadRequest();
            }
            var villa = VillaStore.villaList.FirstOrDefault(s=> s.Id ==id);

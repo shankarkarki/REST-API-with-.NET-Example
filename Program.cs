@@ -1,14 +1,18 @@
-using Serilog;
+
+using Data;
+using Microsoft.EntityFrameworkCore;
 
 public class Program
 {
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddDbContext<ApplicationDbContext>(option => {option.UseNpgsql(builder.Configuration.GetConnectionString("DefaultSQLConnection"));});
 
         // Add services to the container.
-        Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
-        builder.Host.UseSerilog();
+        // Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+        // builder.Host.UseSerilog();
+        // By installing the Serilog and Extension Nuget packages, we build you own custom instances of serilog.
         builder.Services.AddControllers(option =>
         {
             option.ReturnHttpNotAcceptable = true;

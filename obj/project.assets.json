@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "Humanizer.Core/2.14.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/7.0.10": {
         "type": "package",
         "dependencies": {
@@ -68,6 +81,102 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore/7.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "7.0.11",
+          "Microsoft.EntityFrameworkCore.Analyzers": "7.0.11",
+          "Microsoft.Extensions.Caching.Memory": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/7.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/7.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/7.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.11",
+          "Microsoft.Extensions.DependencyModel": "7.0.0",
+          "Mono.TextTemplating": "2.2.1"
+        },
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/7.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.11"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -77,6 +186,48 @@
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.0",
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
@@ -91,25 +242,6 @@
         },
         "runtime": {
           "lib/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Microsoft.Extensions.Configuration.Binder/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
-        },
-        "compile": {
-          "lib/net7.0/Microsoft.Extensions.Configuration.Binder.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.Configuration.Binder.dll": {
             "related": ".xml"
           }
         },
@@ -159,52 +291,12 @@
           "System.Text.Json": "7.0.0"
         },
         "compile": {
-          "lib/net7.0/Microsoft.Extensions.DependencyModel.dll": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
           "lib/net7.0/Microsoft.Extensions.DependencyModel.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "7.0.0"
-        },
-        "compile": {
-          "lib/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Microsoft.Extensions.Hosting.Abstractions/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0"
-        },
-        "compile": {
-          "lib/net7.0/Microsoft.Extensions.Hosting.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.Hosting.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -299,6 +391,18 @@
           }
         }
       },
+      "Mono.TextTemplating/2.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.CodeDom": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -328,162 +432,38 @@
           }
         }
       },
-      "Serilog/3.0.1": {
+      "Npgsql/7.0.4": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
+        },
         "compile": {
-          "lib/net7.0/Serilog.dll": {
+          "lib/net7.0/Npgsql.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Serilog.dll": {
+          "lib/net7.0/Npgsql.dll": {
             "related": ".xml"
           }
         }
       },
-      "Serilog.AspNetCore/7.0.0": {
+      "Npgsql.EntityFrameworkCore.PostgreSQL/7.0.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.Extensions.Logging": "7.0.0",
-          "Serilog": "2.12.0",
-          "Serilog.Extensions.Hosting": "7.0.0",
-          "Serilog.Formatting.Compact": "1.1.0",
-          "Serilog.Settings.Configuration": "7.0.0",
-          "Serilog.Sinks.Console": "4.0.1",
-          "Serilog.Sinks.Debug": "2.0.0",
-          "Serilog.Sinks.File": "5.0.0"
+          "Microsoft.EntityFrameworkCore": "[7.0.5, 8.0.0)",
+          "Microsoft.EntityFrameworkCore.Abstractions": "[7.0.5, 8.0.0)",
+          "Microsoft.EntityFrameworkCore.Relational": "[7.0.5, 8.0.0)",
+          "Npgsql": "7.0.4"
         },
         "compile": {
-          "lib/net7.0/Serilog.AspNetCore.dll": {
+          "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Serilog.AspNetCore.dll": {
+          "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Serilog.Extensions.Hosting/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Hosting.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
-          "Serilog": "2.12.0",
-          "Serilog.Extensions.Logging": "7.0.0"
-        },
-        "compile": {
-          "lib/net7.0/Serilog.Extensions.Hosting.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Serilog.Extensions.Hosting.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Extensions.Logging/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Logging": "7.0.0",
-          "Serilog": "2.12.0"
-        },
-        "compile": {
-          "lib/net7.0/Serilog.Extensions.Logging.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Serilog.Extensions.Logging.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Formatting.Compact/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Serilog": "2.8.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Serilog.Formatting.Compact.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Serilog.Formatting.Compact.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Settings.Configuration/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "7.0.0",
-          "Microsoft.Extensions.DependencyModel": "7.0.0",
-          "Serilog": "2.12.0"
-        },
-        "compile": {
-          "lib/net7.0/Serilog.Settings.Configuration.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Serilog.Settings.Configuration.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Sinks.Console/4.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Serilog": "2.10.0"
-        },
-        "compile": {
-          "lib/net5.0/Serilog.Sinks.Console.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Serilog.Sinks.Console.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Sinks.Debug/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Serilog": "2.10.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Serilog.Sinks.Debug.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Serilog.Sinks.Debug.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Serilog.Sinks.File/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Serilog": "2.10.0"
-        },
-        "compile": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/Serilog.Sinks.File.dll": {
-            "related": ".pdb;.xml"
           }
         }
       },
@@ -550,10 +530,21 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "System.CodeDom/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {}
+        }
+      },
       "System.Text.Encodings.Web/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.Text.Encodings.Web.dll": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
@@ -578,7 +569,7 @@
           "System.Text.Encodings.Web": "7.0.0"
         },
         "compile": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
@@ -594,6 +585,24 @@
     }
   },
   "libraries": {
+    "Humanizer.Core/2.14.1": {
+      "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
+      "type": "package",
+      "path": "humanizer.core/2.14.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.14.1.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/net6.0/Humanizer.dll",
+        "lib/net6.0/Humanizer.xml",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
     "Microsoft.AspNetCore.JsonPatch/7.0.10": {
       "sha512": "ZLt5XeTIQhv6yiFa+JdnyxokaQOi3UCV7nVOs8iTrjVvUZW0tYZl0V33ewXr/upFaL2bg5o8F6q2bjwrsbtoaw==",
       "type": "package",
@@ -710,6 +719,103 @@
         "ref/xamarinwatchos10/_._",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore/7.0.11": {
+      "sha512": "r7YGITjQ7v1hYtUXIavjSx+T1itKVPUFAIBN7HaKNjbR8x+gep8w9H3NEchglJOh1woZR4b2MhbSo2YFRZwZDg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore/7.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.xml",
+        "microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/7.0.11": {
+      "sha512": "IoOnhycZ0/VtLowf0HgB0cujxwksokzkS3/5108AHOcbntHUTqwxtCjG4E4FCly/45G+mxb+4PxBdFZhA49lwQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.abstractions/7.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
+        "microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/7.0.11": {
+      "sha512": "Qexum5safSSfijx6P1QSq5bVJPPTM/uf7lQmpL/shkiozEC/0FzqNaVUfFpbNN8zsO1jMFYbeDMF4cxJMlTT9w==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.analyzers/7.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
+        "lib/netstandard2.0/_._",
+        "microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/7.0.11": {
+      "sha512": "DaykA+XkNNiznnJq8HWVl4jpBycL9/W8NkonoBz7eIrxfU9Q4zH4iPztlvOkJugYCNPS29frPnju3RY72FoPNQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/7.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.7.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/7.0.11": {
+      "sha512": "yHEEyah1XARStV1SJOsdKj8ieoMCZ0MkNuQaLfWONMWmbqwuDohfGQZk/FuzdT4aO/lJrUYiXbBSFv0ACzphEw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational/7.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.xml",
+        "microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.11": {
+      "sha512": "dhNLVQsMi6E4XEkVNmxbaNkLd06Q0ipwgiBz9k9rSjzaNJQVUA+/N6lsKRWXjFjTPgsaVpos+KN5Iimy6TQ2Yg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/7.0.11",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/_._",
+        "microsoft.entityframeworkcore.tools.7.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-arm64/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -943,6 +1049,60 @@
         "tools/netcoreapp2.1/System.Diagnostics.DiagnosticSource.dll"
       ]
     },
+    "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
+      "sha512": "IeimUd0TNbhB4ded3AbgBLQv2SnsiVugDyGV1MvspQFVlA07nDC7Zul7kcwH5jWN3JiTcp/ySE83AIJo8yfKjg==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.abstractions/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Caching.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Caching.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Memory/7.0.0": {
+      "sha512": "xpidBs2KCE2gw1JrD0quHE72kvCaI3xFql5/Peb2GRtUuZX+dYPoK/NTdVMiM67Svym0M0Df9A3xyU0FbMQhHw==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.memory/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Caching.Memory.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Caching.Memory.targets",
+        "lib/net462/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net462/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/net6.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net6.0/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/net7.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/net7.0/Microsoft.Extensions.Caching.Memory.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.xml",
+        "microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.memory.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
       "sha512": "f34u2eaqIjNO9YLHBz8rozVZ+TcFiFs0F3r7nUJd7FRkVSxk8u4OpoK226mi49MwexHOR2ibP9MFvRUaLilcQQ==",
       "type": "package",
@@ -967,33 +1127,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Configuration.Binder/7.0.0": {
-      "sha512": "tgU4u7bZsoS9MKVRiotVMAwHtbREHr5/5zSEV+JPhg46+ox47Au84E3D2IacAaB0bk5ePNaNieTlPrfjbbRJkg==",
-      "type": "package",
-      "path": "microsoft.extensions.configuration.binder/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.Configuration.Binder.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Configuration.Binder.targets",
-        "lib/net462/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/net462/Microsoft.Extensions.Configuration.Binder.xml",
-        "lib/net6.0/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/net6.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "lib/net7.0/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/net7.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
-        "microsoft.extensions.configuration.binder.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -1080,62 +1213,6 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
         "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
         "microsoft.extensions.dependencymodel.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
-      "sha512": "NyawiW9ZT/liQb34k9YqBSNPLuuPkrjMgQZ24Y/xXX1RoiBkLUdPMaQTmxhZ5TYu8ZKZ9qayzil75JX95vGQUg==",
-      "type": "package",
-      "path": "microsoft.extensions.fileproviders.abstractions/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.FileProviders.Abstractions.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.FileProviders.Abstractions.targets",
-        "lib/net462/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/net462/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "lib/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/net7.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
-        "microsoft.extensions.fileproviders.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Hosting.Abstractions/7.0.0": {
-      "sha512": "43n9Je09z0p/7ViPxfRqs5BUItRLNVh5b6JH40F2Agkh2NBsY/jpNYTtbCcxrHCsA3oRmbR6RJBzUutB4VZvNQ==",
-      "type": "package",
-      "path": "microsoft.extensions.hosting.abstractions/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.Hosting.Abstractions.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Hosting.Abstractions.targets",
-        "lib/net462/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/net462/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "lib/net7.0/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/net7.0/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.Hosting.Abstractions.xml",
-        "microsoft.extensions.hosting.abstractions.7.0.0.nupkg.sha512",
-        "microsoft.extensions.hosting.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -1308,6 +1385,19 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Mono.TextTemplating/2.2.1": {
+      "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
+      "type": "package",
+      "path": "mono.texttemplating/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/Mono.TextTemplating.dll",
+        "lib/netstandard2.0/Mono.TextTemplating.dll",
+        "mono.texttemplating.2.2.1.nupkg.sha512",
+        "mono.texttemplating.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -1356,204 +1446,46 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Serilog/3.0.1": {
-      "sha512": "E4UmOQ++eNJax1laE+lws7E3zbhKgHsGJbO7ra0yE5smUh+5FfUPIKKBxM3MO1tK4sgpQke6/pLReDxIc/ggNw==",
+    "Npgsql/7.0.4": {
+      "sha512": "7UVPYy2RP0ci04PED1tc9ZCaTw/DfSdSkLiGEFCAvwMwsgA/bAluj1liNzP1IpN0MFofnOF0cm1zJfmbEuCehg==",
       "type": "package",
-      "path": "serilog/3.0.1",
+      "path": "npgsql/7.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "icon.png",
-        "lib/net462/Serilog.dll",
-        "lib/net462/Serilog.xml",
-        "lib/net471/Serilog.dll",
-        "lib/net471/Serilog.xml",
-        "lib/net5.0/Serilog.dll",
-        "lib/net5.0/Serilog.xml",
-        "lib/net6.0/Serilog.dll",
-        "lib/net6.0/Serilog.xml",
-        "lib/net7.0/Serilog.dll",
-        "lib/net7.0/Serilog.xml",
-        "lib/netstandard2.0/Serilog.dll",
-        "lib/netstandard2.0/Serilog.xml",
-        "lib/netstandard2.1/Serilog.dll",
-        "lib/netstandard2.1/Serilog.xml",
-        "serilog.3.0.1.nupkg.sha512",
-        "serilog.nuspec"
+        "lib/net5.0/Npgsql.dll",
+        "lib/net5.0/Npgsql.xml",
+        "lib/net6.0/Npgsql.dll",
+        "lib/net6.0/Npgsql.xml",
+        "lib/net7.0/Npgsql.dll",
+        "lib/net7.0/Npgsql.xml",
+        "lib/netcoreapp3.1/Npgsql.dll",
+        "lib/netcoreapp3.1/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.7.0.4.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
       ]
     },
-    "Serilog.AspNetCore/7.0.0": {
-      "sha512": "F6p6rzOmg/R0EPI/PjJXcAlhCzusW5+xFx8kbsy6mJ6/mHI6wWWPxZbsLPoAYTpMiopKFl7HZhAr//KABGHtBQ==",
+    "Npgsql.EntityFrameworkCore.PostgreSQL/7.0.4": {
+      "sha512": "ZYMtyG6pmLtUsFAx0/XaIlVkJM+1gArWEKD55cLLxiVlGScAphjiGj+G7Gk16yg5lhhdWx+bgXWpIUISXuS33g==",
       "type": "package",
-      "path": "serilog.aspnetcore/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net462/Serilog.AspNetCore.dll",
-        "lib/net462/Serilog.AspNetCore.xml",
-        "lib/net6.0/Serilog.AspNetCore.dll",
-        "lib/net6.0/Serilog.AspNetCore.xml",
-        "lib/net7.0/Serilog.AspNetCore.dll",
-        "lib/net7.0/Serilog.AspNetCore.xml",
-        "lib/netstandard2.0/Serilog.AspNetCore.dll",
-        "lib/netstandard2.0/Serilog.AspNetCore.xml",
-        "lib/netstandard2.1/Serilog.AspNetCore.dll",
-        "lib/netstandard2.1/Serilog.AspNetCore.xml",
-        "serilog.aspnetcore.7.0.0.nupkg.sha512",
-        "serilog.aspnetcore.nuspec"
-      ]
-    },
-    "Serilog.Extensions.Hosting/7.0.0": {
-      "sha512": "AWsDTs6TeCtyXYDWakzLXCOZA3/IdIfBWBwkYAF0ZvVktVr3E15oYP9pfI7GzKaGVmHaJF9TgFQnFEfcnzEkcw==",
-      "type": "package",
-      "path": "serilog.extensions.hosting/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net462/Serilog.Extensions.Hosting.dll",
-        "lib/net462/Serilog.Extensions.Hosting.xml",
-        "lib/net6.0/Serilog.Extensions.Hosting.dll",
-        "lib/net6.0/Serilog.Extensions.Hosting.xml",
-        "lib/net7.0/Serilog.Extensions.Hosting.dll",
-        "lib/net7.0/Serilog.Extensions.Hosting.xml",
-        "lib/netstandard2.0/Serilog.Extensions.Hosting.dll",
-        "lib/netstandard2.0/Serilog.Extensions.Hosting.xml",
-        "lib/netstandard2.1/Serilog.Extensions.Hosting.dll",
-        "lib/netstandard2.1/Serilog.Extensions.Hosting.xml",
-        "serilog.extensions.hosting.7.0.0.nupkg.sha512",
-        "serilog.extensions.hosting.nuspec"
-      ]
-    },
-    "Serilog.Extensions.Logging/7.0.0": {
-      "sha512": "9faU0zNQqU7I6soVhLUMYaGNpgWv6cKlKb2S5AnS8gXxzW/em5Ladm/6FMrWTnX41cdbdGPOWNAo6adi4WaJ6A==",
-      "type": "package",
-      "path": "serilog.extensions.logging/7.0.0",
+      "path": "npgsql.entityframeworkcore.postgresql/7.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "lib/net462/Serilog.Extensions.Logging.dll",
-        "lib/net462/Serilog.Extensions.Logging.xml",
-        "lib/net6.0/Serilog.Extensions.Logging.dll",
-        "lib/net6.0/Serilog.Extensions.Logging.xml",
-        "lib/net7.0/Serilog.Extensions.Logging.dll",
-        "lib/net7.0/Serilog.Extensions.Logging.xml",
-        "lib/netstandard2.0/Serilog.Extensions.Logging.dll",
-        "lib/netstandard2.0/Serilog.Extensions.Logging.xml",
-        "lib/netstandard2.1/Serilog.Extensions.Logging.dll",
-        "lib/netstandard2.1/Serilog.Extensions.Logging.xml",
-        "serilog-extension-nuget.png",
-        "serilog.extensions.logging.7.0.0.nupkg.sha512",
-        "serilog.extensions.logging.nuspec"
-      ]
-    },
-    "Serilog.Formatting.Compact/1.1.0": {
-      "sha512": "pNroKVjo+rDqlxNG5PXkRLpfSCuDOBY0ri6jp9PLe505ljqwhwZz8ospy2vWhQlFu5GkIesh3FcDs4n7sWZODA==",
-      "type": "package",
-      "path": "serilog.formatting.compact/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net452/Serilog.Formatting.Compact.dll",
-        "lib/net452/Serilog.Formatting.Compact.xml",
-        "lib/netstandard1.1/Serilog.Formatting.Compact.dll",
-        "lib/netstandard1.1/Serilog.Formatting.Compact.xml",
-        "lib/netstandard2.0/Serilog.Formatting.Compact.dll",
-        "lib/netstandard2.0/Serilog.Formatting.Compact.xml",
-        "serilog.formatting.compact.1.1.0.nupkg.sha512",
-        "serilog.formatting.compact.nuspec"
-      ]
-    },
-    "Serilog.Settings.Configuration/7.0.0": {
-      "sha512": "MlabSn74uXAGKNv9WWDdGejmsr7cKhsfi98ZtdeK119s4lTLp+hakBtnPm8OvXNUvtXYs2ijXKA0tIy4IMnjWQ==",
-      "type": "package",
-      "path": "serilog.settings.configuration/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net462/Serilog.Settings.Configuration.dll",
-        "lib/net462/Serilog.Settings.Configuration.xml",
-        "lib/net6.0/Serilog.Settings.Configuration.dll",
-        "lib/net6.0/Serilog.Settings.Configuration.xml",
-        "lib/net7.0/Serilog.Settings.Configuration.dll",
-        "lib/net7.0/Serilog.Settings.Configuration.xml",
-        "lib/netstandard2.0/Serilog.Settings.Configuration.dll",
-        "lib/netstandard2.0/Serilog.Settings.Configuration.xml",
-        "serilog.settings.configuration.7.0.0.nupkg.sha512",
-        "serilog.settings.configuration.nuspec"
-      ]
-    },
-    "Serilog.Sinks.Console/4.0.1": {
-      "sha512": "apLOvSJQLlIbKlbx+Y2UDHSP05kJsV7mou+fvJoRGs/iR+jC22r8cuFVMjjfVxz/AD4B2UCltFhE1naRLXwKNw==",
-      "type": "package",
-      "path": "serilog.sinks.console/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net45/Serilog.Sinks.Console.dll",
-        "lib/net45/Serilog.Sinks.Console.xml",
-        "lib/net5.0/Serilog.Sinks.Console.dll",
-        "lib/net5.0/Serilog.Sinks.Console.xml",
-        "lib/netstandard1.3/Serilog.Sinks.Console.dll",
-        "lib/netstandard1.3/Serilog.Sinks.Console.xml",
-        "lib/netstandard2.0/Serilog.Sinks.Console.dll",
-        "lib/netstandard2.0/Serilog.Sinks.Console.xml",
-        "serilog.sinks.console.4.0.1.nupkg.sha512",
-        "serilog.sinks.console.nuspec"
-      ]
-    },
-    "Serilog.Sinks.Debug/2.0.0": {
-      "sha512": "Y6g3OBJ4JzTyyw16fDqtFcQ41qQAydnEvEqmXjhwhgjsnG/FaJ8GUqF5ldsC/bVkK8KYmqrPhDO+tm4dF6xx4A==",
-      "type": "package",
-      "path": "serilog.sinks.debug/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net45/Serilog.Sinks.Debug.dll",
-        "lib/net45/Serilog.Sinks.Debug.xml",
-        "lib/net46/Serilog.Sinks.Debug.dll",
-        "lib/net46/Serilog.Sinks.Debug.xml",
-        "lib/netstandard1.0/Serilog.Sinks.Debug.dll",
-        "lib/netstandard1.0/Serilog.Sinks.Debug.xml",
-        "lib/netstandard2.0/Serilog.Sinks.Debug.dll",
-        "lib/netstandard2.0/Serilog.Sinks.Debug.xml",
-        "lib/netstandard2.1/Serilog.Sinks.Debug.dll",
-        "lib/netstandard2.1/Serilog.Sinks.Debug.xml",
-        "serilog.sinks.debug.2.0.0.nupkg.sha512",
-        "serilog.sinks.debug.nuspec"
-      ]
-    },
-    "Serilog.Sinks.File/5.0.0": {
-      "sha512": "uwV5hdhWPwUH1szhO8PJpFiahqXmzPzJT/sOijH/kFgUx+cyoDTMM8MHD0adw9+Iem6itoibbUXHYslzXsLEAg==",
-      "type": "package",
-      "path": "serilog.sinks.file/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "images/icon.png",
-        "lib/net45/Serilog.Sinks.File.dll",
-        "lib/net45/Serilog.Sinks.File.pdb",
-        "lib/net45/Serilog.Sinks.File.xml",
-        "lib/net5.0/Serilog.Sinks.File.dll",
-        "lib/net5.0/Serilog.Sinks.File.pdb",
-        "lib/net5.0/Serilog.Sinks.File.xml",
-        "lib/netstandard1.3/Serilog.Sinks.File.dll",
-        "lib/netstandard1.3/Serilog.Sinks.File.pdb",
-        "lib/netstandard1.3/Serilog.Sinks.File.xml",
-        "lib/netstandard2.0/Serilog.Sinks.File.dll",
-        "lib/netstandard2.0/Serilog.Sinks.File.pdb",
-        "lib/netstandard2.0/Serilog.Sinks.File.xml",
-        "lib/netstandard2.1/Serilog.Sinks.File.dll",
-        "lib/netstandard2.1/Serilog.Sinks.File.pdb",
-        "lib/netstandard2.1/Serilog.Sinks.File.xml",
-        "serilog.sinks.file.5.0.0.nupkg.sha512",
-        "serilog.sinks.file.nuspec"
+        "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
+        "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.xml",
+        "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
+        "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.xml",
+        "npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
+        "npgsql.entityframeworkcore.postgresql.nuspec",
+        "postgresql.png"
       ]
     },
     "Swashbuckle.AspNetCore/6.5.0": {
@@ -1644,6 +1576,27 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
+      ]
+    },
+    "System.CodeDom/4.4.0": {
+      "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
+      "type": "package",
+      "path": "system.codedom/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.4.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Text.Encodings.Web/7.0.0": {
@@ -1754,10 +1707,8 @@
       "Microsoft.AspNetCore.JsonPatch >= 7.0.10",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 7.0.10",
       "Microsoft.AspNetCore.OpenApi >= 7.0.10",
-      "Serilog >= 3.0.1",
-      "Serilog.AspNetCore >= 7.0.0",
-      "Serilog.Extensions.Logging >= 7.0.0",
-      "Serilog.Sinks.File >= 5.0.0",
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.11",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.4",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -1810,21 +1761,15 @@
             "target": "Package",
             "version": "[7.0.10, )"
           },
-          "Serilog": {
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[3.0.1, )"
+            "version": "[7.0.11, )"
           },
-          "Serilog.AspNetCore": {
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
-            "version": "[7.0.0, )"
-          },
-          "Serilog.Extensions.Logging": {
-            "target": "Package",
-            "version": "[7.0.0, )"
-          },
-          "Serilog.Sinks.File": {
-            "target": "Package",
-            "version": "[5.0.0, )"
+            "version": "[7.0.4, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
