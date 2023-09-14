@@ -1,0 +1,13 @@
+# Visual Studio Code files
+.vscode/
+.vscodeignore
+# NuGet packages
+/packages/
+*.nupkg
+# Including props files is necessary for some .NET SDK scenarios (.NET Core, .NET 5+)
+!**/*.props
+# .NET build directories
+/bin/
+/obj/
+/debug/
+/bin/
