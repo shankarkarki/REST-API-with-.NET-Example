@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Catalog.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230915112134_UTC")]
-    partial class UTC
+    [Migration("20230917161241_SeedingVillaTable")]
+    partial class SeedingVillaTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,7 +70,7 @@ namespace Catalog.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 15, 11, 21, 34, 29, DateTimeKind.Utc).AddTicks(9620),
+                            CreatedDate = new DateTime(2023, 9, 17, 16, 12, 41, 246, DateTimeKind.Utc).AddTicks(550),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -83,7 +83,7 @@ namespace Catalog.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 15, 11, 21, 34, 29, DateTimeKind.Utc).AddTicks(9630),
+                            CreatedDate = new DateTime(2023, 9, 17, 16, 12, 41, 246, DateTimeKind.Utc).AddTicks(550),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -96,7 +96,7 @@ namespace Catalog.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 15, 11, 21, 34, 29, DateTimeKind.Utc).AddTicks(9630),
+                            CreatedDate = new DateTime(2023, 9, 17, 16, 12, 41, 246, DateTimeKind.Utc).AddTicks(560),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -109,7 +109,7 @@ namespace Catalog.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 15, 11, 21, 34, 29, DateTimeKind.Utc).AddTicks(9630),
+                            CreatedDate = new DateTime(2023, 9, 17, 16, 12, 41, 246, DateTimeKind.Utc).AddTicks(560),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -122,7 +122,7 @@ namespace Catalog.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 15, 11, 21, 34, 29, DateTimeKind.Utc).AddTicks(9630),
+                            CreatedDate = new DateTime(2023, 9, 17, 16, 12, 41, 246, DateTimeKind.Utc).AddTicks(560),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",

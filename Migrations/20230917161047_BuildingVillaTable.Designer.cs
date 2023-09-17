@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Catalog.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230915070856_CreateVillaTable")]
-    partial class CreateVillaTable
+    [Migration("20230917161047_BuildingVillaTable")]
+    partial class BuildingVillaTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
